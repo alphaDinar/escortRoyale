@@ -1,0 +1,72 @@
+.topNav {
+  padding-top: 3vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.menuTab{
+  display: none;
+}
+
+.topNav nav{
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.topNav a{
+  color: white;
+  color: var(--text);
+}
+
+.registerTab{
+  margin-left: auto;
+  border: 2px dotted var(--theme);
+  padding: 5px;
+  border-radius: 40px;
+}
+
+@media all and (max-width:1300px){
+  .topNav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .registerTab{
+    margin: auto;
+  }
+  
+  .topNav nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    gap: 0.5rem;
+    width: 170px;
+    padding: 15px;
+    right: -200px;
+    background: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.4s ease;
+    z-index: 1000;
+  }
+  
+  .topNav nav.change{
+    right: 0;
+  }
+
+  .menuTab{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    cursor: pointer;
+    background: var(--theme);
+    color: wheat;
+  }
+}

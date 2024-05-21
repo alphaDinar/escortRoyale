@@ -1,0 +1,159 @@
+.hostBox {
+  padding-top: 3vh;
+  border-radius: 15px;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-left: 3px solid darkgray;
+}
+
+.imgBox {
+  position: relative;
+  width: 100%;
+  /* height: 300px; */
+}
+
+.imgBox img {
+  /* height: 100%; */
+  width: 100%;
+}
+
+
+.mediaSet {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.mediaSet img {
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+  gap: 2rem;
+}
+
+.right hr {
+  border-top: 2px solid var(--theme);
+  width: 100%;
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactBox a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--theme);
+  padding: 5px 10px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.contactBox a svg {
+  color: wheat;
+  font-size: 1.2rem;
+}
+
+.conBox {
+  width: 100%;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.conBox h3 {
+  font-size: 1.3rem;
+}
+
+.con {
+  display: grid;
+  gap: 0.2rem;
+  background: whitesmoke;
+}
+
+.con p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.con p strong,
+.conBox p span {
+  padding: 7px;
+}
+
+.con p strong {
+  background: ghostwhite;
+}
+
+.conBox p span {
+  background: rgb(227, 227, 240);
+}
+
+.relatedBox {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.relatedBox article {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.relatedBox div {
+  position: relative;
+  height: 50vh;
+}
+
+@media all and (max-width:1100px) {
+  .hostBox {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    border: none;
+  }
+
+  .right {
+    align-items: center;
+  }
+
+  .relatedBox article {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .relatedBox div:nth-child(4) {
+    display: none;
+  }
+}
+
+@media all and (max-width:750px) {
+  .hostBox {
+    padding-top: 0;
+  }
+
+  .imgBox {
+    width: 80%;
+  }
+
+  .relatedBox article {
+    grid-template-columns: 1fr;
+  }
+}
