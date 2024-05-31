@@ -53,6 +53,8 @@ const HeadBox = () => {
           {/* <MdEast /> */}
         </button>
       </section>
+
+      <section className={styles.searchBox}></section>
     </section>
   );
 }

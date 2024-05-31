@@ -1,8 +1,9 @@
-.hosts{
+.hosts {
   display: grid;
   gap: 1.5rem;
 }
-.host{
+
+.host {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -12,36 +13,51 @@
   color: black;
 }
 
-.host header{
+.host header {
   display: flex;
   justify-content: space-between;
 }
-.host header p{
+
+.host header p {
   display: flex;
   align-items: center;
 }
-.host header p{
+
+.host header p {
   color: var(--theme);
 }
 
-.imgBox{
+
+.host video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.imgBox {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.imgBox div{
+
+.imgBox div {
   position: relative;
   height: 350px;
 }
-.imgBox div img{
+
+.imgBox div img {
   border-radius: 15px;
 }
 
-.host small{
+.host small {
   font-size: 0.9rem;
 }
 
-.host legend{
+.host legend {
   background: var(--theme);
   color: wheat;
   padding: 5px;
@@ -50,15 +66,17 @@
   width: max-content;
 }
 
-@media all and (max-width:900px){
-  .host{
+@media all and (max-width:900px) {
+  .host {
     gap: 0.5rem;
     padding: 8px;
   }
-  .imgBox{
+
+  .imgBox {
     gap: 0.1rem;
   }
-  .imgBox div{
+
+  .imgBox div {
     height: 170px;
   }
 }

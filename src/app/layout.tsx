@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { WinSizeContextProvider } from "./contexts/winSizeContext";
+import { IsLoadingContextProvider } from "./contexts/isLoadingContext";
+import { NotifyContextProvider } from "./contexts/notifyContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <WinSizeContextProvider>
-          {children}
-        </WinSizeContextProvider>
+        <IsLoadingContextProvider>
+          <NotifyContextProvider>
+            <WinSizeContextProvider>
+              {children}
+            </WinSizeContextProvider>
+          </NotifyContextProvider>
+        </IsLoadingContextProvider>
       </body>
     </html>
   );
